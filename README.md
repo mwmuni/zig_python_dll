@@ -1,6 +1,15 @@
 # Monte Carlo π Calculator (Zig + Python)
 
-High-performance Monte Carlo π approximation using Zig with Python bindings. Features SIMD vectorization and efficient random number generation.
+A reference implementation demonstrating how to create high-performance Python extensions using Zig. Uses Monte Carlo π approximation as an example, showcasing SIMD vectorization, efficient random number generation, and Python/Zig interop.
+
+## Learning Goals
+
+This project demonstrates:
+- Writing Python extensions in Zig
+- Using SIMD vectorization in Zig
+- Efficient memory management patterns
+- Python/Zig type system bridging via ctypes
+- Modern build tooling integration
 
 ## Requirements
 
@@ -27,7 +36,7 @@ zig build --release=fast
 mv zig-out/bin/compute.dll .
 ```
 
-## Usage
+## Example Usage
 
 ```python
 from compute import ZigComputeLib
@@ -37,7 +46,7 @@ result = zigpi.calculate_pi(100_000_000)  # Use 100M points
 print(f"π ≈ {result:.6f}")
 ```
 
-## Implementation Details
+## Technical Implementation
 
 - SIMD vectorization (8 points at a time)
 - Pre-allocated random number buffer
@@ -54,3 +63,5 @@ print(f"π ≈ {result:.6f}")
 ├── main.py           # Example usage
 └── build.zig         # Build config
 ```
+
+Note: This is a reference implementation intended for learning purposes. For practical π calculation, consider using specialized mathematical libraries.
