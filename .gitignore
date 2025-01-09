@@ -1,0 +1,23 @@
+# Python-generated files
+__pycache__/
+*.py[oc]
+build/
+dist/
+wheels/
+*.egg-info
+
+# Virtual environments
+.venv
+
+# Zig
+zig-out/
+
+# Cache
+.*cache
+
+# uv
+.python-version
+
+# Binaries
+*.dll
+*.exe
